@@ -10,21 +10,22 @@ overlay.classList.add("overlay");
 
 // burger menu + nav ///////////////////////////
 btnBurger.addEventListener("click", () => {
+    header.classList.add("isHide");
     btnBurger.classList.toggle("isActive");
     nav.classList.toggle("isActive");
     if (nav.classList.contains("isActive")) {
-        // Ajouter la classe qui désactive le scroll
         document.body.classList.add("no-scroll");
-        // Ajouter l'overlay et le style pour le filtre gris
         main.appendChild(overlay);
         overlay.addEventListener("click", () => {
             btnBurger.classList.remove("isActive");
             nav.classList.remove("isActive");
             document.body.classList.remove("no-scroll");
             main.removeChild(overlay);
+            setTimeout(() => {
+                header.classList.remove("isHide");
+            }, 500);
         });
     } else {
-        // Enlever la classe qui désactive le scroll et l'overlay
         document.body.classList.remove("no-scroll");
         main.removeChild(overlay);
     }
@@ -36,6 +37,9 @@ navLink.forEach(function(navlien){
         nav.classList.remove("isActive")
         document.body.classList.remove('no-scroll');
         main.removeChild(overlay);
+        setTimeout(() => {
+            header.classList.remove("isHide");
+        }, 500);
     })
 })
 //////////////////////////////////////////////////////

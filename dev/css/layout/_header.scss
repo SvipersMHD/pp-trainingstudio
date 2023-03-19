@@ -5,6 +5,7 @@
     position: absolute;
     z-index: 10;
     transition: $transi;
+    overflow: hidden;
     
     .header__wrapper {
         display: flex;
@@ -86,8 +87,9 @@ nav {
         background-color: #f7f7f7;
         position: absolute;
         
+        
         .header__wrapper {
-            
+
             .logo {
                 color: black;
                 font-size: 1rem;
@@ -175,6 +177,10 @@ nav.isActive {
         color: white;
     }
 }
+.header.isHide {
+    overflow: visible;
+    transition: $transi;
+}
 .nav__link.isActive {
     color: $color-orange !important;
     font-weight: bold;
@@ -187,4 +193,5 @@ nav.isActive {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 5;
+    transition: $transi;
 }
