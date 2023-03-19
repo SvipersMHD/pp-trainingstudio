@@ -32,6 +32,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     transition: $transi;
+    cursor: pointer;
 
     &:hover {
         color: $color-orange;
