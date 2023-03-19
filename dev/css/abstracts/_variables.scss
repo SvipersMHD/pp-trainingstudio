@@ -1,0 +1,10 @@
+@mixin centrage {
+    width: 1300px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+@mixin smallP {
+    font-size: 14px;
+    text-transform: none;
+    line-height: 1.5rem;
+}

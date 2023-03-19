@@ -1,0 +1,40 @@
+body {
+    font-family: $ff;
+    overflow-x: hidden;
+}
+.section__titre {
+    text-transform: uppercase;
+    @include centrage;
+    text-align: center;
+    padding: 75px 0;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    span{
+        color: $color-orange;
+    }
+    p {
+        @include smallP;
+        width: 100%;
+    }
+}
+.title__orange {
+    color: $color-orange;
+}
+
+.btn {
+    color: white;
+    background: $color-orange;
+    display: inline-block;
+    padding: 15px 20px ;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: $transi;
+
+    &:hover {
+        color: $color-orange;
+        background: #f7f7f7;
+    }
+}
